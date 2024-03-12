@@ -18,7 +18,9 @@ import os
 class Login:
     def __init__(self,root):
         self.root=root
+        self.root.resizable(0, 0)
         self.root.title("Login")
+        self.root.state('zoomed')
         self.root.geometry("1920x1080+0+0")
 
         # variables 
@@ -67,13 +69,13 @@ class Login:
 
 
         # Creating Button Registration
-        loginbtn=Button(frame1,command=self.reg,text="Register",font=("times new roman",10,"bold"),bd=0,relief=RIDGE,fg="white",bg="#002B53",activeforeground="orange",activebackground="#002B53")
-        loginbtn.place(x=33,y=370,width=50,height=20)
+        loginbtn=Button(frame1,command=self.reg,text="Register",font=("times new roman",13,"bold"),bd=0,relief=RIDGE,fg="white",bg="#002B53",activeforeground="orange",activebackground="#002B53")
+        loginbtn.place(x=60,y=390,width=80,height=22)
 
 
         # Creating Button Forget
-        loginbtn=Button(frame1,command=self.forget_pwd,text="Forget",font=("times new roman",10,"bold"),bd=0,relief=RIDGE,fg="white",bg="#002B53",activeforeground="orange",activebackground="#002B53")
-        loginbtn.place(x=90,y=370,width=50,height=20)
+        loginbtn=Button(frame1,command=self.forget_pwd,text="Forget",font=("times new roman",13,"bold"),bd=0,relief=RIDGE,fg="white",bg="#002B53",activeforeground="orange",activebackground="#002B53")
+        loginbtn.place(x=180,y=390,width=80,height=22)
 
 
     #  THis function is for open register window
@@ -329,7 +331,7 @@ class Face_Recognition_System:
         
         #Function Buttons
     def open_img(self):
-        os.startfile("dataset")
+        os.startfile("data")
     
         
     def student_details(self):
